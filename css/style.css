@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+
+/* variaveis*/
+:root{
+    --gradientColor1: rgba(43, 176, 50, 0.857);
+    --gradientColor2: rgb(0, 63, 0);
+    --backColor: rgb(151, 254, 159);
+    --corArticle: rgb(255, 255, 255);
+    --colorTitle: rgba(31, 130, 36, 0.736);
+    --colorDes: rgb(1, 125, 1);
+    --colorSectionAprender: rgb(85, 169, 85);
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-android: 'Fonte', 'Roboto-Condensed';  
+    --fonte-destaque: 'Bebas Neue';
+}
+/* Configuração global */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Começa o Header e a fonte*/
+
+header {
+    background-image: linear-gradient(var(--gradientColor1), var(--gradientColor2))
+}
+
+@font-face {
+    font-family: 'Fonte';
+    src: url('../fontes/idroid.otf')format('opentype');
+}
+
+@counter-style repeating-emoji {
+    system: cyclic;
+    symbols: "\2714"; // unicode code point
+    suffix: " ";
+}
+
+header > h1 {
+    color: var(--corArticle);
+    font-family: var(--fonte-destaque);
+    min-height: 100px;
+    padding-top: 40px;
+    font-style: normal;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    font-size: 2.4em;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.402);
+}
+
+div#desc, div#desc1 {
+    color: var(--corArticle);
+    text-align: center;
+    margin: auto;
+    font-family: var(--fonte-padrao);
+    font-style: normal;
+    font-size: 1.1em;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.402);
+}
+
+nav {
+    margin-top: 15px;
+    box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.424);
+}
+
+nav>a {
+    color: var(--corArticle);
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition-duration: 0.5s;
+}
+
+nav > a:hover {
+    background-color: var(--gradientColor1);
+    padding: 1px;
+    color: var(--gradientColor2);
+}
+
+
+/* Agora começa o body todo */
+
+
+body {
+    background-color: var(--backColor);
+    font-family: var(--fonte-padrao);
+}
+
+/* Toda a Tag main*/
+main {
+    background-color: var(--corArticle);
+    margin-left: 130px;
+    margin-right: 130px;
+    padding: 10px;
+    margin: auto;
+    min-width: 300px;
+    max-width: 800px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.52);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+main > article > p {
+    margin: 15px 0px;
+    text-indent: 30px;
+    font-size: 1em;
+    line-height: 2em;
+    text-align: justify;
+}
+
+main > article > h1 {
+    margin: 10px 10px 0px 0px;
+    padding: 15px;
+    font-family: var(--fonte-android);
+    color: var(--colorTitle);
+}
+
+/* Subtítulos do blog*/
+
+h2 {
+    background-image: linear-gradient(to right, var(--backColor), var(--corArticle));
+    margin: 10px 10px 0px 0px;
+    text-indent: 8px;
+    font-family: var(--fonte-android);
+    color: var(--colorTitle);
+}
+
+/* toda classe div é cnetralizada*/
+
+div {
+    text-align: center;
+}
+
+/* Isso deixa a imagem em tamanho estável em quaquer situação*/
+
+img {
+    width: 100%;
+}
+
+/* Aqui embaixo é para a imagem do bugdroid */
+img#bug {
+    max-width: 350px;
+}
+
+/* Aqui embaixo é para as palavras em destaque */
+strong#des {
+    color: var(--colorDes);
+    font-weight: bold;
+    font-family: var(--fonte-destaque);
+    padding: 2px 2px;
+    background-color: rgba(138, 255, 144, 0.857);
+}
+/* Aqui é o link Android History */
+a#ext {
+    color: var(--colorDes);
+    font-weight: bolder;
+    text-decoration: none;
+    background-color: rgba(138, 255, 144, 0.857);
+    padding: 2px 2px;
+}
+a#ext:hover{
+    text-decoration: underline;
+    background-color: var(--corArticle);
+    
+}
+/* Toda a tag section, começando em Aprender Mais e terminando um parágrafo antes do rodapé*/
+
+aside {
+    margin: 10px 10px 10px 10px;
+    padding: 1px;
+    background-color: rgb(164, 210, 164);
+    font: var(--fonte-android);
+    font-weight: 400;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.298);
+}
+
+/* Seção Aprender Mais*/
+
+aside>div#int {
+    background-color: var(--colorSectionAprender);
+    color: var(--corArticle);
+    border-radius: 3px 3px 0px 0px;
+    padding: 1px;
+}
+
+/* Parágrafos de toda essa seção*/
+
+aside > p {
+    margin-left: 10px;
+}
+
+/* iframe para o vídeo responsivo do youtube*/
+
+div > iframe {
+    width: 80%;
+    border-top: 15px;
+    border-left: 45px;
+    border-right: 45px;
+    border-bottom: 15px;
+    border-style: solid;
+    border-color: var(--gradientColor2);
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.403);
+}
+
+/*lista das versões nomeadas*/
+
+aside > ul {
+    
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    list-style-type: repeating-emoji;
+    list-style-position: inside;
+    columns: 2;
+}
+
+
+
+/* descrição de cada termo da lista */
+
+abbr {
+    text-decoration: underline;
+}
+
+/* Rodapé da página*/
+
+footer > p {
+    background-color: var(--gradientColor2);
+    color: var(--corArticle);
+    margin: 10px 10px 0px 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 0.9em;
+}
+/* Links do rodapé */
+footer > p > a#foot{
+    color:  rgba(138, 255, 144, 0.857);
+    text-decoration: underline;
+    font-weight: bold;
+}
+footer > p > a#foot:hover{
+    color: rgb(255, 255, 0);
+    text-decoration: underline;
+    font-weight: bold;
+}
+footer > p > a#foot:visited{
+    color: white;
+    text-decoration: underline;
+    font-weight: bold;
+}
